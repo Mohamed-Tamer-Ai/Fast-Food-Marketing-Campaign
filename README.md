@@ -111,4 +111,3 @@ To run the interactive web app locally instead:
 2. Enjoy the code-switched technical walkthrough!
 
 ---
-*Created as part of an Advanced Data Engineering & Analytics Portfolio.*
