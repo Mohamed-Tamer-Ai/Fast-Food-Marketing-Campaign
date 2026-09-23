@@ -1,0 +1,29 @@
+[
+    {
+        "group1": "1",
+        "group2": "2",
+        "meandiff": -10.7696,
+        "p-adj": 0.0,
+        "lower": -14.7738,
+        "upper": -6.7654,
+        "reject": true
+    },
+    {
+        "group1": "1",
+        "group2": "3",
+        "meandiff": -2.7345,
+        "p-adj": 0.2444,
+        "lower": -6.7388,
+        "upper": 1.2697,
+        "reject": false
+    },
+    {
+        "group1": "2",
+        "group2": "3",
+        "meandiff": 8.0351,
+        "p-adj": 0.0,
+        "lower": 4.1208,
+        "upper": 11.9493,
+        "reject": true
+    }
+]
