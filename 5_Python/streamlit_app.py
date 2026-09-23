@@ -22,20 +22,47 @@ st.set_page_config(
 # ──────────────────────────────────────────────
 # Data Loading
 # ──────────────────────────────────────────────
-DATA_PATHS = [
-    "../1_Datasets/dataset_cleaned.csv",
-    "../Datasets/dataset_cleaned.csv",
-    "../WA_Marketing-Campaign.csv",
-]
-
+from pathlib import Path
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
-    """Load cleaned dataset from the first available path."""
+    """Load cleaned dataset using robust relative pathing."""
+    # Find the repository root dynamically based on this script's location
+    # __file__ is .../5_Python/streamlit_app.py
+    # .parent is .../5_Python/
+    # .parent.parent is the repository root
+    current_dir = Path(__file__).parent
+    repo_root = current_dir.parent
+    
+    # The absolute path to the dataset, regardless of where Streamlit is executed from
+    primary_path = repo_root / "1_Datasets" / "dataset_cleaned.csv"
+    
+    # Fallback strings just in case
+    DATA_PATHS = [
+        primary_path,
+        "1_Datasets/dataset_cleaned.csv",      # If executing from repo root
+        "../1_Datasets/dataset_cleaned.csv",   # If executing from 5_Python/
+    ]
+    
     for path in DATA_PATHS:
         if os.path.exists(path):
             return pd.read_csv(path)
-    st.error("❌ Dataset not found. Check the 1_Datasets/ folder.")
+            
+    # If all paths fail, output the debugging info requested
+    st.error("❌ Dataset not found. Check your GitHub repository and case sensitivity.")
+    
+    st.markdown("### 🐛 Path Debugging Information")
+    st.write(f"**Current Working Directory (`os.getcwd()`):** `{os.getcwd()}`")
+    st.write(f"**Script Location (`__file__`):** `{__file__}`")
+    
+    st.write("**Contents of Current Working Directory:**")
+    st.json(os.listdir(os.getcwd()))
+    
+    # Also try to print the repo root if it exists
+    if repo_root.exists():
+        st.write(f"**Contents of Repo Root (`{repo_root}`):**")
+        st.json(os.listdir(repo_root))
+        
     st.stop()
 
 
