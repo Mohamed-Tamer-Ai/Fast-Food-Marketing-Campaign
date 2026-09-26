@@ -34,8 +34,11 @@ This project provides an end-to-end analytical solution. Moving beyond basic ave
 
 *   **📗 Excel (`2_Excel/`)**: Built an interactive dashboard completely from scratch using the raw data. Features **5 interactive Pivot Tables** and Slicers utilizing **Report Connections** to cross-filter all charts simultaneously.
 *   **🗄️ SQL (`3_SQL/`)**: Wrote advanced queries utilizing **CTEs** for age-tier bucketing and **Window Functions** (`RANK()`) to identify top-performing locations dynamically.
+؟
 *   **📊 Power BI (`4_BI/`)**: Engineered a complete reporting solution. Handled **full ETL via Power Query** to clean the raw data and build a **Star Schema** (Fact & Dimension tables) entirely from scratch. Features robust **DAX measures** (e.g., dynamic `% Lift vs Baseline` using `VAR` and `REMOVEFILTERS`), Interactive Tooltips, and Drill-through pages.
+
 *   **🐍 Python (Jupyter Notebook) (`5_Python/`)**: Conducted rigorous statistical testing. Included assumption checks (**Shapiro-Wilk** for normality, **Levene** for equal variance), **One-Way ANOVA**, and **Tukey HSD Post-Hoc** analysis. The notebook explanations are uniquely **code-switched in Egyptian Arabic and English technical terms** to simulate a real-world Cairo tech team environment.
+
 *   **🌐 Python (Streamlit) (`5_Python/`)**: Deployed the statistical findings into an interactive, user-friendly Streamlit web app, complete with dynamic visualization tabs and dynamic alpha-value sliders for significance testing.
 
 ---
@@ -80,7 +83,9 @@ Marketing_Campaign_AB_Test/
 After rigorous statistical testing, the results clearly dictate the next steps for the marketing team:
 
 1.  **Stop Promotion 2 Immediately:** The data proves with statistical significance that Promotion 2 is the worst-performing campaign across all market sizes. Any budget allocated here is being wasted.
+
 2.  **Promotions 1 & 3 are Winners:** Both campaigns heavily outperformed Promotion 2. 
+
 3.  **The Tie-Breaker:** The difference in sales between Promo 1 and Promo 3 is **Statistically Insignificant** ($p > 0.05$). Because they perform equally well in terms of revenue, the final executive choice should be driven by secondary factors:
     *   Which campaign has a lower operational **cost**?
     *   Which campaign aligns better with long-term **brand strategy**?
