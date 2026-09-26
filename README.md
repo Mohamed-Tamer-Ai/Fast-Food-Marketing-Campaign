@@ -1,3 +1,5 @@
+<img width="269" height="179" alt="images" src="https://github.com/user-attachments/assets/ccd8290d-91dd-4bd1-a580-a23101e6058e" />
+
 # 🍔 Fast Food Marketing Campaign: End-to-End A/B Testing & BI Portfolio
 
 **🚀 [Live Streamlit Dashboard: Click here to view the interactive app!](https://fast-food-marketing-campaign-punirphtjmzbxzosfq9d4w.streamlit.app/)**
