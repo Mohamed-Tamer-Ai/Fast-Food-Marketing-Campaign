@@ -113,3 +113,5 @@ To run the interactive web app locally instead:
 2. Enjoy the code-switched technical walkthrough!
 
 ---
+
+*This portfolio project was specifically developed for the NTI "AI for Business" track to demonstrate the power of data-driven decision-making in corporate environments.*
